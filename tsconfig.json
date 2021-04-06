@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "strict": true,
+    "baseUrl": "./",
+    "outDir": "dist",
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "target": "ES2019",
+    "emitDecoratorMetadata": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  }
+}
