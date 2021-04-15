@@ -1,6 +1,8 @@
 module.exports = {
     globals: {
-        URL: "https://demoqa.com/"
+        URL: "https://demoqa.com/",
+        HEADLESS: false,
+        SLOWMO: 0
       },
     preset: 'jest-puppeteer',
     testMatch: ["**/?(*.)+(spec|test).[t]s"],
