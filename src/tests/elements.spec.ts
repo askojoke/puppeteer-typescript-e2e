@@ -8,7 +8,7 @@ const baseUrl: string = URL.toString();
 describe('Elements', () => {
     beforeEach(async () => {
         await page.goto(baseUrl);
-        await basePage.isUrlEqual(baseUrl)
+        await basePage.isUrlEqual(baseUrl);
         await basePage.isPageTitleEqual('ToolsQA');
         await basePage.clickOnCardByName('Elements');
 
