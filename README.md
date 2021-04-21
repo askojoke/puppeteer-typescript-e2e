@@ -17,7 +17,7 @@ npm run test
 You can also run single scenario with 
 
 ```
-npm run test -- -t 'should fill dropdown in Widgets - Select Menu'
+npm run test -- -t 'should fill dropdown menu in Widgets - Select Menu'
 ```
 
 Or to change global variables through cmd in JSON string:

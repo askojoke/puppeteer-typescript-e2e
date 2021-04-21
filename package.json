@@ -6,6 +6,7 @@
   },
   "devDependencies": {
     "@types/expect-puppeteer": "^4.4.5",
+    "axios": "^0.21.1",
     "chai": "^4.3.4",
     "cross-env": "^7.0.3",
     "puppeteer": "^8.0.0",
