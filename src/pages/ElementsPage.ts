@@ -20,7 +20,7 @@ export class ElementsPage {
 
     public async getDropDownValue(): Promise<string | null> {
         var elemText = await page.$eval(this.dropDownValue,
-            item => item.textContent)
+            item => item.textContent);
         return elemText;
     }
 }
