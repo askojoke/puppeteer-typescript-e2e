@@ -3,7 +3,7 @@ import { ElementHandle } from "puppeteer"
 export class BasePage {
     private leftPanelMenu: string = '.menu-list';
     private leftPanelButton: string = '.header-text';
-    private leftPanelNestedButton: string = '.btn-light span';
+    private leftPanelNestedButton: string = 'div.show .btn-light span';
 
     public async isPageTitleEqual(title: string): Promise<void> {
         return expect(page.title()).resolves.toMatch(title);
@@ -22,14 +22,13 @@ export class BasePage {
     }
 
     public async clickLeftPanelNestedButtonByName(name: string): Promise<void> {
-        return expect(page).toClick('.btn-light span', { text: name })
+        return expect(page).toMatchElement(this.leftPanelNestedButton, { text: name, timeout: 2000 }).then(button => {
+            return button.click();
+        });
     }
 
-    public async openLeftPanelMenuByName(name: string): Promise<void> {
-        return expect(page).toClick(this.leftPanelButton, { text: name })
-    }
-
-    public async clickOnLeftPanelNestedButton(name: string): Promise<void> {
-        return expect(page).toClick(this.leftPanelNestedButton, { text: name })
+    public async openLeftPanelMenuByName(name: string): Promise<ElementHandle<Element>> {
+        await expect(page).toClick(this.leftPanelButton, { text: name });
+        return expect(page).toMatchElement('.show');
     }
 }
